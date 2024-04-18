@@ -21,7 +21,7 @@ def get_driver():
     # Web stranku ziskate nasledujicim:
     # (jedno nebo druhe, zalezi na nastaveni prostedi)
     # driver.get("http://opencart:8080/")
-    # driver.get("http://localhost:8080/")
+    driver.get("http://localhost:8080/")
 
     return driver
 

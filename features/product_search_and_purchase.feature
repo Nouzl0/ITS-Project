@@ -18,7 +18,7 @@ Feature: Searching and buying products
     When the user adds the product to the cart
     Then the user should see the product in the cart
 
-  Scenario: Search for a MacBook 
+  Scenario Outline: Search for a MacBook 
     Given a user is on the site
     When the user searches for a MacBook
     Then the user should see related search results for MacBook

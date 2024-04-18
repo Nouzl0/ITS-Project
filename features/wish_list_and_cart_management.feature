@@ -14,10 +14,10 @@ Feature: Wish List and Cart Management
     When the user adds a Samsung monitor to the wish list
     Then they should see that the Samsung monitor is added to their wish list
 
-  Scenario: Viewing the Wish List
-    Given a user has added products to their wish list
+  Scenario Outline: Viewing the Wish List
+    Given a user has added <product> to their wish list
     When the user views the wish list
-    Then they should see the products in wish list page
+    Then they should see the <product> in wish list page
 
     Examples:
       | product         |
