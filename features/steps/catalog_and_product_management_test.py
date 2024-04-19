@@ -124,13 +124,12 @@ def step_when_user_deletes_selected_category(context):
     time.sleep(1)
     context.driver.find_element(By.XPATH, "/html/body/div/div[2]/div[2]/div/div[2]/form/div[1]/table/tbody/tr[7]/td[1]/input").click()
     context.driver.find_element(By.XPATH, "/html/body/div/div[2]/div[1]/div/div/button[2]").click()
-    #context.driver.switch_to.alert.accept()
-    context.driver.switch_to.alert.dismiss()
+    context.driver.switch_to.alert.accept()
     pass
 
 @then('the category should be removed')
 def step_then_category_should_be_removed(context):
-    #assert context.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div")
+    assert context.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div")
     pass
     
 
