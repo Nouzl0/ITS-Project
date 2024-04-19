@@ -8,8 +8,7 @@ import string
 import time
 
 def before_all(context):
-    
-    # Get driver
+    # Setup driver
     try:
         context.driver = webdriver.Remote(
                 command_executor='http://localhost:4444/wd/hub',
@@ -20,12 +19,15 @@ def before_all(context):
                 options=webdriver.FirefoxOptions())
     context.driver.implicitly_wait(15)
 
-    # Create random user data
+    # Setup variables
     letters = string.ascii_lowercase
-    context.first_name = context.name = ''.join(random.choice(letters) for i in range(10)) 
-    context.last_name = context.name = ''.join(random.choice(letters) for i in range(10))
-    context.email = context.name = ''.join(random.choice(letters) for i in range(10)) + "@gmail.com"
-    context.password = context.name = ''.join(random.choice(letters) for i in range(10))
+    context.first_name = context.name = ''.join(random.choice(letters) for i in range(10))              # User first name
+    context.last_name = context.name = ''.join(random.choice(letters) for i in range(10))               # User last name
+    context.email = context.name = ''.join(random.choice(letters) for i in range(10)) + "@gmail.com"    # User email
+    context.password = context.name = ''.join(random.choice(letters) for i in range(10))                # User password
+    context.admin_username = "user"                                                                     # Admin username
+    context.admin_password = "bitnami"                                                                  # Admin password
+    context.tmp_ref = None                                                                              # Refrence data
 
 def after_all(context):
     context.driver.close()

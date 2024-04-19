@@ -53,11 +53,10 @@ def step_then_user_sees_samsung_monitor_in_wish_list(context):
     assert context.driver.find_element(By.XPATH, "/html/body/div/div")
 
 
-# [13] - Scenario Outline: Viewing the Wish List
+# [13] - Scenario: Viewing the Wish List
 # ---------------------------------------------
 @given('a user has added {product} to their wish list')
 def step_given_user_has_added_product_to_wish_list(context, product):
-    # get text from <a> tag with XPATH "/html/body/nav/div/div[2]/ul/li[3]/a"
     text = context.driver.find_element(By.XPATH, "/html/body/nav/div/div[2]/ul/li[3]/a").text
     if text == "Wish List (0)": 
         assert False
