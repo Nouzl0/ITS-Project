@@ -1,7 +1,10 @@
-# ITS Projekt 1
+# ITS-Projekt BDD-Testy-OpenCart
 
-- **Autor:** Nikolas Nosál (xnosal01)
-- **Datum:** 2024-04-05
+Implemente regresních testů pro webovou aplikaci OpenCart pomocou technologií Docker, Python, Selenium, Behave. Testovány byly pouze základní funkce aplikace OpenCart. 
+
+
+- **Autor:** Nikolas Nosál, <xnosal01@stud.fit.vutbr.cz>
+- **Report:** [BugReport](report.pdf)
 
 ## Matice pokrytí artefaktů
 
